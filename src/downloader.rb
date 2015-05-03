@@ -1,6 +1,6 @@
 require 'redd'
 require 'open-uri'
-require './configuration.rb'
+require './src/configuration.rb'
 
 class Downloader
 

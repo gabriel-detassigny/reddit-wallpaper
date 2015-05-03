@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require './downloader.rb'
+require './src/downloader.rb'
 
 dl = Downloader.new
 filename = dl.get_top_link
@@ -8,5 +8,5 @@ filename = dl.get_top_link
 if filename.nil?
   puts "Error : could not download any wallpaper!"
 else
-  `osascript set_wallpaper.scpt #{filename}`
+  `osascript src/system/macosx.scpt #{filename}`
 end

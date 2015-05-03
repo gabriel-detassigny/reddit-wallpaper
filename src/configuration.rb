@@ -6,7 +6,7 @@ class Configuration
 
   def initialize
     @yaml = begin
-      YAML.load(File.open "./config.yml")
+      YAML.load(File.open "config/reddit.yml")
     rescue ArgumentError => e
       puts "Could not parse YAML: #{e.message}"
     end
