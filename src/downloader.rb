@@ -10,7 +10,7 @@ class Downloader
   end
 
   def get_top_link
-    links = @client.get_hot(@config['subreddit'], limit: 5)
+    links = @client.get_hot(@config['subreddit'].join('+'), limit: 5)
     links.each do |link|
       if link.url.length > 0
         extension = File.extname link.url
