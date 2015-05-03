@@ -10,13 +10,18 @@ class Downloader
   end
 
   def get_top_link
-    filename = nil
-    link = @client.get_hot('wallpaper', limit: 1).first
-    if link.url.length > 0
-      filename = "/tmp/wallpaper.jpg"
-      _download_image link.url, filename
+    links = @client.get_hot('wallpaper', limit: 5)
+    links.each do |link|
+      if link.url.length > 0
+        extension = File.extname link.url
+        if %w(.gif .jpeg .jpg .png).include? extension
+          path = "#{Dir.pwd}/wallpaper#{extension}"
+          _download_image link.url, path
+          return path
+        end
+      end
     end
-    return filename
+    return nil
   end
 
   private
