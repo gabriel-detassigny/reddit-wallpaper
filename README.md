@@ -25,14 +25,14 @@ Follow [these instructions](https://github.com/reddit/reddit/wiki/OAuth2-Quick-S
 Then, in the project directory, copy/paste this
 
 ```
-cp config.yml.example config.yml
+cp config/reddit.yml.example config/reddit.yml
 ```
 
-and set your credentials in *config.yml*.
+and set your credentials in *config/reddit.yml*.
 
 To start **Reddit Wallpaper**, simple type :
 ```
-./main.rb
+./reddit_wallpaper.rb
 ```
 
 ### Contributions
