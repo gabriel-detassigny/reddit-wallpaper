@@ -1,4 +1,5 @@
 config/reddit.yml
 
-# Downloaded wallpaper
-wallpaper.*
+# Downloaded wallpapers
+wallpapers/*
+!wallpapers/.gitkeep
