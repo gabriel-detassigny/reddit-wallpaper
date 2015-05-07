@@ -10,14 +10,16 @@ class Downloader
   end
 
   def get_top_link
-    links = @client.get_hot(@config['subreddit'].join('+'), limit: 5)
+    links = @client.get_hot(@config['subreddit'].join('+'), limit: 10)
     links.each do |link|
       if link.url.length > 0
         extension = File.extname link.url
         if %w(.gif .jpeg .jpg .png).include? extension
           path = "#{Dir.pwd}/wallpapers/#{link.id}#{extension}"
-          _download_image link.url, path
-          return path
+          unless File.exists? path
+            _download_image link.url, path
+            return path
+          end
         end
       end
     end
