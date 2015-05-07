@@ -30,6 +30,29 @@ cp config/reddit.yml.example config/reddit.yml
 
 and set your credentials in *config/reddit.yml*.
 
+## Configuration
+
+### Subreddits
+
+You can select from which subreddits you want to download wallpapers!
+This can be set in *config/reddit.yml*, through the *subreddit* array:
+```
+subreddit:
+  - subreddit1
+  - subreddit2
+```
+
+Here are some nice subreddits for wallpapers :
+
+- [wallpapers](https://www.reddit.com/r/wallpapers)
+- [wallpaper](https://www.reddit.com/r/wallpaper)
+- [ImaginaryLandscapes](https://www.reddit.com/r/ImaginaryLandscapes/)
+- [ImaginaryTechnology](https://www.reddit.com/r/ImaginaryTechnology/)
+- [desktoplego](https://www.reddit.com/r/desktoplego)
+- [minimalwallpaper](https://www.reddit.com/r/minimalwallpaper)
+
+### Execution
+
 To start **Reddit Wallpaper**, simple type :
 ```
 ./reddit_wallpaper.rb
