@@ -12,6 +12,10 @@ class Configuration
     end
   end
 
+  def system
+    @yaml['system']
+  end
+
   def reddit
     @yaml['reddit']
   end

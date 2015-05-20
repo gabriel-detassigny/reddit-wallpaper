@@ -6,3 +6,6 @@ reddit:
   subreddit:
     - wallpapers
     - wallpaper
+
+system:
+  gui: macosx
