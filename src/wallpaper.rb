@@ -13,7 +13,7 @@ class Wallpaper
     when 'macosx'
       `osascript src/system/macosx.scpt #{@filename}`
     else
-      'Error : Unknown Graphical interface!'
+      puts 'Error : Unknown Graphical interface!'
     end
   end
 end
