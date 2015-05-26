@@ -15,6 +15,9 @@ class Wallpaper
     # XFCE
     when 'xfce'
       `./src/system/xfce.sh #{@filename}`
+    # Gnome and Unity
+    when 'gnome', 'unity'
+      `gsettings set org.gnome.desktop.background picture-uri file://#{@filename}`
     else
       puts 'Error : Unknown Graphical interface!'
     end
