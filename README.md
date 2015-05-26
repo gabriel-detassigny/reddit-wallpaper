@@ -1,12 +1,15 @@
 # Reddit Wallpaper
 
-Automatically set a wallpaper from reddit on your mac.
+Automatically set a wallpaper from reddit on your computer.
+
+This works on both Mac and Linux.
 
 ## Installation
 
 ### Ruby version
 
-This was tested using ruby 2.1.3p242
+You'll probably need a rather recent version of Ruby.
+I tested it with ruby 2.1 and 2.2 and it works fine.
 
 ### Dependencies
 
@@ -18,9 +21,15 @@ You can install it using Bundler, by typing the following command :
 bundle install
 ```
 
+or just manually install the gem :
+
+```
+gem install redd
+```
+
 ### Connect to Reddit API
 
-Follow [these instructions](https://github.com/reddit/reddit/wiki/OAuth2-Quick-Start-Example) to get a client ID and a secret to connect to reddit's API.
+Follow [these instructions](https://github.com/reddit/reddit/wiki/OAuth2-Quick-Start-Example) to get a client ID and a secret to connect to reddit's API. You'll need to have a reddit account as well.
 
 Then, in the project directory, copy/paste this
 
@@ -31,6 +40,16 @@ cp config/reddit.yml.example config/reddit.yml
 and set your credentials in *config/reddit.yml*.
 
 ## Configuration
+
+### GUI
+
+You need to set your graphical interface in *reddit.yml*, through the *gui* key.
+Here are the supported interfaces:
+
+* *macosx* : Mac OS X graphical interface
+* *xfce* : [XFCE](http://www.xfce.org/), a nice lightweight GUI
+* *gnome* : [Gnome](https://www.gnome.org/) version 3
+* *unity* : [Unity](https://unity.ubuntu.com/), Ubuntu's default GUI
 
 ### Subreddits
 
