@@ -6,6 +6,7 @@ This works on both Mac and Linux.
 
 ## Installation
 
+
 ### Ruby version
 
 You'll probably need a rather recent version of Ruby.
